@@ -8,15 +8,15 @@ export default function Navbar() {
     const pathname = usePathname();
 
     return (
-    <header className="w-full bg-white">
-        <nav className="flex justify-between px-6 py-2 pr-2">
+    <header className="sticky top-0 z-50 w-full bg-white ">
+        <nav className="flex justify-between items-center px-6 py-1 pr-2">
             <Link href="/">
             <div className="relative cursor-pointer">
                 {/* Desktop Logo */}
                 <img
                 src={TLLogo.src}
                 alt="Tiny Library Logo"
-                className="w-[150px] h-auto hidden md:block"
+                className="w-[120px] h-auto hidden md:block"
                 />
                 {/* Mobile Logo */}
                 <img
