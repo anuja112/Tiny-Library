@@ -28,7 +28,9 @@ export default function Navbar() {
             </Link>
             <ul className="flex items-center gap-1.5">
             <NavLink href="/books" isActive={pathname.startsWith("/books")}>Books</NavLink>
-            <NavLink href="/about" isActive={pathname === "/about"}>About</NavLink>
+            <NavLink href={pathname === "/about/contact" ? "/about/contact" : "/about"}
+                isActive={pathname === "/about" || pathname === "/about/contact"}>
+                {pathname === "/about/contact" ? "ABOUT : CONTACT" : "ABOUT"}</NavLink>
             </ul>
         </nav>
     </header>
