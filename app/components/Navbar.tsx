@@ -3,6 +3,7 @@ import Link from "next/link";
 import NavLink from "@/app/components/NavLink";
 import { usePathname } from "next/navigation";
 import TLLogo from "@/public/tinylibrary-logo.png";
+import Image from "next/image";
 
 export default function Navbar() {
     const pathname = usePathname();
@@ -13,16 +14,20 @@ export default function Navbar() {
             <Link href="/">
             <div className="relative cursor-pointer">
                 {/* Desktop Logo */}
-                <img
-                src={TLLogo.src}
-                alt="Tiny Library Logo"
-                className="w-[120px] h-auto hidden md:block"
+                <Image
+                    src={TLLogo}
+                    alt="Tiny Library Logo"
+                    width={200}
+                    height={200}
+                    className="hidden md:block w-[120px] h-auto"
                 />
                 {/* Mobile Logo */}
-                <img
-                src={TLLogo.src}
-                alt="Tiny Library Logo"
-                className="w-[80px] h-auto block md:hidden"
+                <Image
+                    src={TLLogo}
+                    alt="Tiny Library Logo"
+                    width={200}
+                    height={200}
+                    className="w-[80px] h-auto block md:hidden"
                 />
             </div>
             </Link>
