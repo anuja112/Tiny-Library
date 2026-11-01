@@ -19,6 +19,12 @@ export type GetBooksParams = {
     category?: string
 }
 
+export type BooksPageProps = {
+    searchParams: {
+        q?: string
+    }
+}
+
 //component props types
 
 export type BookCardProps = {

@@ -1,3 +1,11 @@
-export default function BooksPage() {
-  return <div>Books Page</div>;
+import Form from "next/form"
+import ModelsGrid from "@/app/components/BooksGrid"
+import { getBooks } from "@/app/lib/models"
+
+export default async function BooksPage() {
+  const books = await getBooks()
+
+    return (
+        <ModelsGrid title="3D Models" books={books} />
+    )
 }
