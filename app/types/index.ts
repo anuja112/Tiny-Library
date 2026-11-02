@@ -19,6 +19,18 @@ export type GetBooksParams = {
     category?: string
 }
 
+export type BooksPageProps = {
+    searchParams: {
+        q?: string
+    }
+}
+
+export type BookDetailPageProps = {
+    params: Promise<{
+        id: string
+    }>
+}
+
 //component props types
 
 export type BookCardProps = {
@@ -36,7 +48,7 @@ export type PillProps = {
 }
 
 export type NavLinkProps = {
-  href: string;
-  children: ReactNode;
-  isActive?: boolean;
+    href: string;
+    children: ReactNode;
+    isActive?: boolean;
 };
