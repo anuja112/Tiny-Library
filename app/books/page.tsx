@@ -6,6 +6,6 @@ export default async function BooksPage() {
   const books = await getBooks()
 
     return (
-        <ModelsGrid title="Books" books={books} />
+        <ModelsGrid title="All" books={books} />
     )
 }
