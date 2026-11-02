@@ -31,6 +31,12 @@ export type BookDetailPageProps = {
     }>
 }
 
+export type CategoryPageProps = {
+    params: Promise<{
+        categoryName: string
+    }>
+}
+
 //component props types
 
 export type BookCardProps = {
